@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="popup.js"></script>
+    <style>
+      .active{
+        border:2px solid blue !important;
+      }
+      .selected{
+        border:2px solid blue !important;
+        height:200px !important;
+      }
+      .colorPalleteClick{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body style="width:350px;margin:0px 8px;">
+    <div>
+      <table>
+        <tr>
+          <td style="width:5%;text-align:center;"><button type="button" id="addnote" style="border-radius: 100%;padding: 4px 6px;"><i class="fa fa-plus"></i></button></td>
+          <td style="width:50%;text-align:center;"><h3>Sticky Notes by Ankur</h3></td>
+          <td style="width:40%;text-align:right;vertical-align:middle;">
+            <ul style="overflow:hidden;padding:0px">
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#5B41C1" style="height:20px;width:20px;border-radius:100%;background-color:#5B41C1;cursor:pointer;"></div></li>
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#5893E0" style="height:20px;width:20px;border-radius:100%;background-color:#5893E0;cursor:pointer;"></div></li>
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#43C2C2" style="height:20px;width:20px;border-radius:100%;background-color:#43C2C2;cursor:pointer;"></div></li>
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#58E55C" style="height:20px;width:20px;border-radius:100%;background-color:#58E55C;cursor:pointer;"></div></li>
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#FCF04E" style="height:20px;width:20px;border-radius:100%;background-color:#FCF04E;cursor:pointer;"></div></li>
+              <li style="display:inline-block;"><div class="colorPalleteClick" data-color="#F25A5F" style="height:20px;width:20px;border-radius:100%;background-color:#F25A5F;cursor:pointer;"></div></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <ul style="list-style: none;padding:5px" id="noteList"></ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

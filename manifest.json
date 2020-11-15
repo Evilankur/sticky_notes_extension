@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sticky Notes by Ankur",
+  "description": "Simple sticky note for browser created",
+  "version": "1.1.4",
+  "author": "Ankur Prajapati",
+  "browser_action": {
+   "default_icon": "sticky.png",
+   "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "sticky.png",
+    "48": "sticky.png",
+    "128": "sticky.png"
+  },
+  "permissions": [
+      "activeTab",
+      "contextMenus",
+      "storage"
+    ],
+  "persistent": false
+}
