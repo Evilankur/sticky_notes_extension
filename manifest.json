@@ -18,6 +18,5 @@
       "activeTab",
       "contextMenus",
       "storage"
-    ],
-  "persistent": false
+    ]
 }

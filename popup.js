@@ -42,13 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       document.getElementById('noteList').appendChild(liElement);
 
-      let notesDiv = document.getElementsByClassName("newNoteDiv");
-      for (var k = 0; k< notesDiv.length; k++) {
-          notesDiv[k].addEventListener('click', selectNotes, false);
-          notesDiv[k].setAttribute('id', "newNoteDiv_"+k);
-          notesDiv[k].setAttribute('data-serial', (k+1));
-      }
-
       let notesHeadingDiv = document.getElementsByClassName("newNoteHeading");
       let notesBodyDiv = document.getElementsByClassName("newNoteBody");
       // alert(notesHeadingDiv.length);
@@ -64,6 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
           notesBodyDiv[m].addEventListener('dblclick', notebodyEditable, false);
           notesBodyDiv[m].setAttribute('id', "noteBodyDiv_"+m);
           notesBodyDiv[m].setAttribute('data-body', "Body_"+(m+1));
+      }
+
+      let notesDiv = document.getElementsByClassName("newNoteDiv");
+      for (var k = 0; k< notesDiv.length; k++) {
+          notesDiv[k].addEventListener('click', selectNotes, false);
+          notesDiv[k].children[0].children[1].addEventListener('keyup', saveNotesDetails(k), false);
+          notesDiv[k].children[1].addEventListener('keyup', saveNotesDetails(k), false);
+          notesDiv[k].setAttribute('id', "newNoteDiv_"+k);
+          notesDiv[k].setAttribute('data-serial', (k+1));
       }
     });
   }, false);
